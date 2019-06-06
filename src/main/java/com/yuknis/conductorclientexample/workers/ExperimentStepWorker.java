@@ -69,4 +69,15 @@ public class ExperimentStepWorker implements Worker {
 
         return result;
     }
+
+    /**
+     * Override this method to app specific rules.
+     *
+     * @return returns the serverId as the id of the instance that the worker is running.
+     */
+    @Override
+    public String getIdentity() {
+        return "conductor-client-example";
+    }
+
 }
